@@ -1,0 +1,28 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kakao?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: kakao#123
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    show-sql: false
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 200
+          batch_versioned_data: true
+        order_inserts: true
+
+#junit:
+#  jupiter:
+#    execution:
+#      parallel:
+#        enabled: true
+#        mode:
+#          default: same_thread
+#          classes:
+#            default: concurrent
